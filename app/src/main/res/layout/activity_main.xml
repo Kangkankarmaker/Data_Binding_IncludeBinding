@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <data>
+
+        <variable
+            name="student"
+            type="kangkan.developer.includebinding.Student" />
+    </data>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+
+
+       <include layout="@layout/student_sum"
+           app:student="@{student}"/>
+
+       <include layout="@layout/student_course"
+           app:student="@{student}"/>
+
+
+
+   </LinearLayout>
+</layout>
